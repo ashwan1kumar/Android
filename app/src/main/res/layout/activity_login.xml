@@ -5,24 +5,42 @@
     android:id="@+id/LoginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:background="@color/purple_200"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:src="@mipmap/ryuga_foreground"/>
     <EditText
         android:id="@+id/etMail"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_margin="12dp"
+        android:background="@color/white"
         android:ems="10"
         android:gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="12dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_margin="60dp"
         android:text="Login" />
 </LinearLayout>
