@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690372001213",
+    "project_id": "firegram-94bc3",
+    "storage_bucket": "firegram-94bc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690372001213:android:7144dfe388210f7f89a6d4",
+        "android_client_info": {
+          "package_name": "com.krashwani0908.firegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690372001213-00pqd1aeot5cfmgdhkqq8l62d4h4sg40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXv9ax82MGOPhhLG-3gLGieYcXwJ62Hh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690372001213-00pqd1aeot5cfmgdhkqq8l62d4h4sg40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

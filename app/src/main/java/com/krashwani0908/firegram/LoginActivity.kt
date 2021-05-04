@@ -1,5 +1,6 @@
 package com.krashwani0908.firegram
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,34 +20,40 @@ class LoginActivity : AppCompatActivity() {
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        val auth = FirebaseAuth.getInstance()
+        if(auth.currentUser != null)
+        {
+            goPostsActivity()
+        }
         initView()
 
         buton.setOnClickListener{
 //            Toast.makeText(this,"Hello There",Toast.LENGTH_LONG).show()
+            buton.isEnabled = false
             val email = x.text.toString()
             val pass = y.text.toString()
-            Log.e("this", email)
-            Log.e("this2", pass)
-            Log.e("this3", "asdasd")
-            Toast.makeText(this,"Password = $pass",Toast.LENGTH_SHORT).show()
+
 
             if(email.isBlank() || pass.isBlank())
             {
                 Toast.makeText(this,"Email and Password Can't be empty", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val auth = FirebaseAuth.getInstance()
+
             auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener {task ->
+
                 if(task.isSuccessful)
                 {
                     Toast.makeText(this,"Login Successful",Toast.LENGTH_SHORT).show()
+                    goPostsActivity()
                 }
                 else
                 {
                     Log.i(TAG,"Sign in with email and password failed",task.exception)
                     Toast.makeText(this,"Authentication Failed",Toast.LENGTH_SHORT).show()
+                    buton.isEnabled = true
                 }
-                Toast.makeText(this,"Password = $pass",Toast.LENGTH_SHORT).show()
+
             }
 
         }
@@ -58,5 +65,12 @@ class LoginActivity : AppCompatActivity() {
         x = findViewById(R.id.etMail)
         y = findViewById(R.id.etPassword)
 
+    }
+    private fun goPostsActivity()
+    {
+        Log.i(TAG,"GoPosts")
+        val intent = Intent(this,PostsActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
