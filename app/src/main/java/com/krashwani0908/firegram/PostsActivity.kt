@@ -6,20 +6,29 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.krashwani0908.firegram.models.Post
 //import com.krashwani0908.firegram.models.Posts
 
 private const val TAG = "PostsActivity"
 class PostsActivity : AppCompatActivity() {
-
     private lateinit var fireStoreDB:FirebaseFirestore
+    private lateinit var posts:MutableList<Post>
+    private lateinit var adapter:PostsAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_posts)
+        posts = mutableListOf()
+        adapter = PostsAdapter(this ,posts)
 
         fireStoreDB = FirebaseFirestore.getInstance()
-        val postsReference = fireStoreDB.collection("Posts")
+        val postsReference = fireStoreDB
+            .collection("posts")
+            .limit(20)
+            .orderBy("creation_time_ms",Query.Direction.DESCENDING)
         postsReference.addSnapshotListener { snapshot, error ->
             if(error!=null || snapshot==null)
             {
