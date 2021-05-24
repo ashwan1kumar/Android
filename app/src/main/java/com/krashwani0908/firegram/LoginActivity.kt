@@ -37,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
             if(email.isBlank() || pass.isBlank())
             {
                 Toast.makeText(this,"Email and Password Can't be empty", Toast.LENGTH_SHORT).show()
+                buton.isEnabled = true;
                 return@setOnClickListener
             }
 

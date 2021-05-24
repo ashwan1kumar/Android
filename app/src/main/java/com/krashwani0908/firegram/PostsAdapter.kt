@@ -30,7 +30,7 @@ class PostsAdapter (val context: Context, val posts:List<Post>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(post: Post) {
             val username = post.user?.username as String
-            itemView.findViewById<TextView>(R.id.tvDescription).text = username
+            itemView.findViewById<TextView>(R.id.tvUsername).text = username
             itemView.findViewById<TextView>(R.id.tvDescription).text = post.Description
             Glide.with(context).load(post.imageUrl).into(itemView.findViewById<ImageView>(R.id.ivPost))
             Glide.with(context).load(getProfileImageUrl(username)).into(itemView.findViewById<ImageView>(R.id.ivProfileImage))

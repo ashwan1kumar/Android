@@ -12,7 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="177dp"
-        android:src="@mipmap/ryuga_foreground"/>
+        android:src="@mipmap/index"/>
     <EditText
         android:id="@+id/etMail"
         android:layout_width="match_parent"
