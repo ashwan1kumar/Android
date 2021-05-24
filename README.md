@@ -7,7 +7,7 @@ This Project contains:
 3) Creating a post page
 
 Some Screenshots of the App
-![Alt text](https://ibb.co/6ypbhDJ "Preview")
-![Alt text](https://ibb.co/F8D1FqV "Preview")
-![Alt text](https://ibb.co/315n7K8 "Preview")
-![Alt text](https://ibb.co/G5csjDK "Preview")
+![Alt text](https://i.ibb.co/Bf7jDTK/Screenshot-20210524-211739-Firegram.png "Preview")
+![Alt text](https://i.ibb.co/0YGLxVt/Screenshot-20210524-211828-Firegram.png "Preview")
+![Alt text](https://i.ibb.co/qBLvd64/Screenshot-20210524-211834-Firegram.png "Preview")
+![Alt text](https://i.ibb.co/sVy5r40/Screenshot-20210524-211847-Firegram.png "Preview")
